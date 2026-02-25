@@ -37,11 +37,11 @@ def _get_tls_info(domain: str, port: int = 443) -> Dict[str, Any]:
                 cert = x509.load_der_x509_certificate(der_cert, default_backend())
                 data["certificate_subject"] = cert.subject.rfc4514_string()
                 data["certificate_issuer"] = cert.issuer.rfc4514_string()
-                not_before = cert.not_valid_before
-                not_after = cert.not_valid_after
+                not_before = cert.not_valid_before_utc
+                not_after = cert.not_valid_after_utc
                 data["certificate_not_before"] = not_before.isoformat()
                 data["certificate_not_after"] = not_after.isoformat()
-                now = datetime.datetime.utcnow()
+                now = datetime.datetime.now(datetime.UTC)
                 data["certificate_valid"] = not_before <= now <= not_after
                 delta = not_after - now
                 data["certificate_expires_in_days"] = max(delta.days, 0)

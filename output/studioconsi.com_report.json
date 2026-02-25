@@ -1,0 +1,413 @@
+{
+  "target": "studioconsi.com",
+  "timestamp_utc": "2026-02-25T16:08:52Z",
+  "total_score": 87.5,
+  "max_total_score": 100.0,
+  "total_score_percent": 87.5,
+  "sections": [
+    {
+      "name": "CERTIFICATES_TLS",
+      "score": 20.0,
+      "max_score": 20.0,
+      "status": "ok",
+      "details": {
+        "https_reachable": true,
+        "tls_version": "TLSv1.3",
+        "cipher": "TLS_AES_256_GCM_SHA384",
+        "certificate_subject": "CN=studioconsi.com",
+        "certificate_issuer": "CN=WE1,O=Google Trust Services,C=US",
+        "certificate_not_before": "2026-02-08T02:15:47+00:00",
+        "certificate_not_after": "2026-05-09T03:13:07+00:00",
+        "certificate_valid": true,
+        "certificate_expires_in_days": 72,
+        "has_chain_ok": true,
+        "crtsh_entries": [],
+        "crtsh_error": "status 503"
+      },
+      "score_percent": 100.0
+    },
+    {
+      "name": "DNS_SECURITY",
+      "score": 20.0,
+      "max_score": 20.0,
+      "status": "ok",
+      "details": {
+        "spf_records": [
+          "v=spf1 include:outlook.com include:_spf.mailersend.net ~all",
+          "google-site-verification=jLpvz3nXtkuOFkpa-sUKkAgI9-5w_xKK14reUaGnW9k"
+        ],
+        "spf_valid": true,
+        "dmarc_records": [
+          "v=DMARC1; p=reject; rua=mailto:ipm6mvw@ar.glockapps.com,mailto:privacy@studioconsi.com; ruf=mailto:ipm6mvw@fr.glockapps.com; fo=1;"
+        ],
+        "dmarc_valid": true,
+        "dkim_selectors_checked": [
+          "default",
+          "selector1",
+          "selector2"
+        ],
+        "dkim_found": true
+      },
+      "score_percent": 100.0
+    },
+    {
+      "name": "TECH_DETECTION",
+      "score": 3.0,
+      "max_score": 10.0,
+      "status": "bad",
+      "details": {
+        "pages_checked": [
+          "https://studioconsi.com",
+          "http://studioconsi.com"
+        ],
+        "technologies": [
+          "CMS: WordPress",
+          "Library: jQuery",
+          "Server: cloudflare"
+        ],
+        "headers_sample": {
+          "Date": "Wed, 25 Feb 2026 16:08:55 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "cf-edge-cache": "cache,platform=wordpress",
+          "X-dlm-no-waypoints": "true",
+          "Permissions-Policy": "private-state-token-redemption=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\"), private-state-token-issuance=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\")",
+          "Link": "<https://studioconsi.com/wp-json/>; rel=\"https://api.w.org/\", <https://studioconsi.com/wp-json/wp/v2/pages/13>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://studioconsi.com/>; rel=shortlink",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=wAC8xw3Jcqe94qwyHGrjc7cgIjTmxj79vaeKxfF9AXRARdWfg1ts3HMdQs8FJnQXtOPRTVxi%2BJDAJATZ%2BKewjr7xDAkA2MERmDPlJK5qIw%3D%3D\"}]}",
+          "cf-cache-status": "DYNAMIC",
+          "vary": "accept-encoding",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Encoding": "gzip",
+          "CF-RAY": "9d3876cebfcc5091-MXP",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        },
+        "body_sample_present": true
+      },
+      "score_percent": 30.0
+    },
+    {
+      "name": "SHODAN",
+      "score": 20.0,
+      "max_score": 20.0,
+      "status": "ok",
+      "details": {
+        "enabled": true,
+        "error": "Access denied (403 Forbidden)",
+        "open_ports": [],
+        "services": [],
+        "vulnerabilities": []
+      },
+      "score_percent": 100.0
+    },
+    {
+      "name": "VIRUSTOTAL",
+      "score": 20.0,
+      "max_score": 20.0,
+      "status": "ok",
+      "details": {
+        "enabled": true,
+        "error": null,
+        "last_analysis_stats": {
+          "malicious": 0,
+          "suspicious": 0,
+          "undetected": 30,
+          "harmless": 63,
+          "timeout": 0
+        },
+        "categories": {},
+        "reputation": 0,
+        "last_analysis_results": [
+          {
+            "engine_name": "Acronis",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "0xSI_f33d",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Abusix",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "ADMINUSLabs",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Axur",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "ChainPatrol",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Criminal IP",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "AILabs (MONITORAPP)",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "AlienVault",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "alphaMountain.ai",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "AlphaSOC",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Antiy-AVL",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "ArcSight Threat Intelligence",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "AutoShun",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "benkow.cc",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Bfore.Ai PreCrime",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "BitDefender",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Bkav",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Blueliv",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Certego",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Chong Lua Dao",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "CINS Army",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Cluster25",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "CRDF",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "CSIS Security Group",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Snort IP sample list",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "CMC Threat Intelligence",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Cyan",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Cyble",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "CyRadar",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "DNS8",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Dr.Web",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Ermes",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "ESET",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "ESTsecurity",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "EmergingThreats",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Emsisoft",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Forcepoint ThreatSeeker",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Fortinet",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "G-Data",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "GCP Abuse Intelligence",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Google Safebrowsing",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "GreenSnow",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "GreyNoise",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Gridinsoft",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "Heimdal Security",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Hunt.io Intelligence",
+            "category": "undetected",
+            "result": "unrated"
+          },
+          {
+            "engine_name": "IPsum",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Juniper Networks",
+            "category": "harmless",
+            "result": "clean"
+          },
+          {
+            "engine_name": "Kaspersky",
+            "category": "harmless",
+            "result": "clean"
+          }
+        ]
+      },
+      "score_percent": 100.0
+    },
+    {
+      "name": "BONUS_SECURITY_CHECKS",
+      "score": 4.5,
+      "max_score": 10.0,
+      "status": "warning",
+      "details": {
+        "https_enforced": true,
+        "hsts": true,
+        "csp": false,
+        "x_frame_options": false,
+        "sri_coverage": 0.014492753623188406,
+        "headers_sample": {
+          "Date": "Wed, 25 Feb 2026 16:08:56 GMT",
+          "Content-Type": "text/html; charset=UTF-8",
+          "Transfer-Encoding": "chunked",
+          "Connection": "keep-alive",
+          "Server": "cloudflare",
+          "Nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+          "cf-edge-cache": "cache,platform=wordpress",
+          "X-dlm-no-waypoints": "true",
+          "Permissions-Policy": "private-state-token-redemption=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\"), private-state-token-issuance=(self \"https://www.google.com\" \"https://www.gstatic.com\" \"https://recaptcha.net\" \"https://challenges.cloudflare.com\" \"https://hcaptcha.com\")",
+          "Link": "<https://studioconsi.com/wp-json/>; rel=\"https://api.w.org/\", <https://studioconsi.com/wp-json/wp/v2/pages/13>; rel=\"alternate\"; title=\"JSON\"; type=\"application/json\", <https://studioconsi.com/>; rel=shortlink",
+          "Report-To": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=BckcqKjuZwTdy0OHwaj0uJK4ASwndZyUkC1kfVW7iIWS5kKWI4sn3S5mLNCqOY8EDdQMYeeYjPM4Wp2mYr8EPW4%2BFPDzHxxRjQFFzfp2kA%3D%3D\"}]}",
+          "cf-cache-status": "DYNAMIC",
+          "vary": "accept-encoding",
+          "Strict-Transport-Security": "max-age=31536000; includeSubDomains; preload",
+          "X-Content-Type-Options": "nosniff",
+          "Content-Encoding": "gzip",
+          "CF-RAY": "9d3876d88e3c5091-MXP",
+          "alt-svc": "h3=\":443\"; ma=86400"
+        }
+      },
+      "score_percent": 45.0
+    }
+  ]
+}

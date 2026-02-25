@@ -18,7 +18,7 @@ def _get_txt_records(name: str) -> List[str]:
     except Exception as exc:
         logger.warning(
             "TXT lookup failed",
-            extra={"name": name, "error": str(exc)},
+            extra={"query_name": name, "error": str(exc)},
         )
         return []
 

@@ -48,7 +48,7 @@ def main() -> None:
 
     logger.info("Starting domain scan", extra={"domain": domain})
 
-    ts = datetime.datetime.utcnow().replace(microsecond=0).isoformat() + "Z"
+    ts = datetime.datetime.now(datetime.UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     cert_tls_data = analyze_certificates_and_tls(http_client, domain)
     dns_data = analyze_dns_security(domain)
