@@ -1,11 +1,35 @@
+**Istruzioni di esecuzione**
+------------
 Creazione ambiente
-Assicurati di avere Python 3.11+.
-Posizionati nella root del progetto (ToolAnalisiDomini).
+
+Assicurati di avere Python 3.11+ installato.
+
+Posizionati nella root del progetto:
+```
+ToolAnalisiDomini/
+```
+Crea e attiva l’ambiente virtuale:
+```
+python -m venv .venv
+.venv\Scripts\activate
+```
+Nota: su Linux / macOS utilizzare source .venv/bin/activate.
+
 Installazione dipendenze
-python -m venv .venv.venv\Scripts\activate  # su Windowspip install -r requirements.txt
-Configurazione credenziali API via variabili d’ambiente
+```
+pip install -r requirements.txt
+```
+Configurazione credenziali API (variabili d’ambiente)
+
 Su PowerShell:
-$env:SHODAN_API_KEY="LA_TUA_CHIAVE_SHODAN"$env:VT_API_KEY="LA_TUA_CHIAVE_VIRUSTOTAL"
-(Se una delle due non è impostata, il tool salterà la relativa integrazione segnalandolo nel report.)
+```
+$env:SHODAN_API_KEY="LA_TUA_CHIAVE_SHODAN"
+$env:VT_API_KEY="LA_TUA_CHIAVE_VIRUSTOTAL"
+```
+Se una delle due variabili non è impostata, il tool salterà automaticamente
+l’integrazione corrispondente e lo segnalerà nel report finale.
+
 Esecuzione analisi
+```
 python main.py --domain example.com --output-dir output
+```
